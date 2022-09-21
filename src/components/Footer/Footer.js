@@ -12,70 +12,70 @@ const Footer = () => {
        md:justify-between
        lg:justify-between justify-center
         gap-9"      >
-        <motion.div className="flex flex-col ml-4">
+        <motion.div className="flex flex-col">
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              delay: 0.5,
+              ease: "linear",
+              duration: "0.6s",
+            }}
+            className="text-sm pb-1"
+          >
+            Development
+          </motion.p>
+          <div className="xl:w-[190px] lg:w-[190px] w-[100px] md:w-[150px] bg-primary h-[1px] " />
+          <p className="text-sm pt-2 border-b-[1px] border-blue-600 w-[50px]">
+            KSA,MC
+          </p>
+        </motion.div>
+        <motion.div className="flex flex-col">
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              delay: 1,
+              ease: "linear",
+              duration: "0.6s",
+            }}
+            className="text-sm pb-1"
+          >
+            Development
+          </motion.p>
+          <div className="xl:w-[190px] lg:w-[190px] w-[100px] md:w-[150px] bg-primary h-[1px] " />
+          <p className="text-sm pt-2 border-b-[1px] border-blue-600 w-[50px]">
+            KSA,MC
+          </p>
+        </motion.div>
+        <motion.div className="flex flex-col ">
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              delay: 1.5,
+              ease: "linear",
+              duration: "0.6s",
+            }}
+            className="text-sm pb-1"
+          >
+            Development
+          </motion.p>
+          <div className="xl:w-[190px] lg:w-[190px] w-[100px] md:w-[150px] bg-primary h-[1px] " />
+          <p className="text-sm pt-2 border-b-[1px] border-blue-600 w-[50px]">
+            KSA,MC
+          </p>
+        </motion.div>
+        <motion.div className="flex flex-col">
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               type: "spring",
               delay: 2,
-              ease: "linear",
-              duration: "0.6s",
-            }}
-            className="text-sm pb-1"
-          >
-            Development
-          </motion.p>
-          <div className="xl:w-[190px] lg:w-[190px] w-[100px] md:w-[150px] bg-primary h-[1px] " />
-          <p className="text-sm pt-2 border-b-[1px] border-blue-600 w-[50px]">
-            KSA,MC
-          </p>
-        </motion.div>
-        <motion.div className="flex flex-col ml-4">
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              delay: 3,
-              ease: "linear",
-              duration: "0.6s",
-            }}
-            className="text-sm pb-1"
-          >
-            Development
-          </motion.p>
-          <div className="xl:w-[190px] lg:w-[190px] w-[100px] md:w-[150px] bg-primary h-[1px] " />
-          <p className="text-sm pt-2 border-b-[1px] border-blue-600 w-[50px]">
-            KSA,MC
-          </p>
-        </motion.div>
-        <motion.div className="flex flex-col ml-4">
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              delay: 4,
-              ease: "linear",
-              duration: "0.6s",
-            }}
-            className="text-sm pb-1"
-          >
-            Development
-          </motion.p>
-          <div className="xl:w-[190px] lg:w-[190px] w-[100px] md:w-[150px] bg-primary h-[1px] " />
-          <p className="text-sm pt-2 border-b-[1px] border-blue-600 w-[50px]">
-            KSA,MC
-          </p>
-        </motion.div>
-        <motion.div className="flex flex-col ml-4">
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              delay: 5,
               ease: "linear",
               duration: "0.6s",
             }}

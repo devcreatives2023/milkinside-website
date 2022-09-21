@@ -17,7 +17,7 @@ const Carousel = () => {
   return (
     <>
       {/* slider */}
-      <div className=" overflow-hidden mt-10 xl:mt-0 lg:mt-0 w-[100%]  ">
+      <div className=" overflow-hidden mt-10 xl:mt-0 lg:mt-0 ">
         {data.design.map((item, index) => {
           return (
             <motion.div
@@ -30,6 +30,7 @@ const Carousel = () => {
               }}
               key={index}
             >
+            
               {index === currentSlide && (
                 <div>
                   <motion.img
@@ -42,7 +43,7 @@ const Carousel = () => {
                       duration: 1,
                     }}
                     style={{ transformOrigin: "top left" }}
-                    className="h-[45vh]  xl:h-[80vh] lg:h-[80vh]  object-cover xl:w-[100%]  lg:w-[100%]"
+                    className="h-[45vh]  xl:h-[80vh] lg:h-[80vh]  object-cover xl:w-[99%]  lg:w-[100%]"
                   />
                 </div>
               )}

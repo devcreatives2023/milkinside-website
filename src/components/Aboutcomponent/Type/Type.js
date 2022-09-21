@@ -13,6 +13,7 @@ const Type = () => {
       </p >
       <p className="flex"><span> tommorrow </span> <span className="ml-2"> today</span> </p>
     </motion.div>
+    
   );
 };
 

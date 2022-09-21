@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Icons = () => {
   return (
     <motion.div 
-    className="invisible xl:visible lg:visible ml-4">
+    className="invisible xl:visible lg:visible ml-2">
       <p className=" text-[#808080bd] mt-[15px]  text-sm uppercase">
         recent parteners
       </p>

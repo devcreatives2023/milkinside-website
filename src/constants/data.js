@@ -2,16 +2,16 @@ import { images } from "../constants";
 const data = {
   design: [
     { id: 1, img: images.img5 },
-    { id: 2, img: images.img4 },
+    { id: 2, img: images.img2 },
     { id: 3, img: images.img3 },
-    { id: 4, img: images.img1 },
+    { id: 4, img: images.img6 },
   ],
 
   types: [
     { id: 1, img: images.img3 },
     { id: 2, img: images.img7 },
     { id: 3, img: images.img5 },
-    { id: 4, img: images.img4 },
+    { id: 4, img: images.img2 },
   ],
 
   sliderWork: [

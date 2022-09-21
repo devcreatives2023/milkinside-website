@@ -30,17 +30,23 @@ const About = () => {
           >
             <div
               className="xl:w-[100%]
-                md:w-[90%] w-[60%] relative left-0 xl:left-0 lg:left-0
+                
+                md:w-[90%] w-[60%] relative left-0 xl:left-0 
+                lg:left-0
                 right-0 z-10 "
             >
-              <Carousel />
+              <div className="relative right-0 w-[410px]">
+                <Carousels />
+              </div>
+
               {/* ------------------------------------ */}
               <div
                 className="uppercase rotate-[90deg] top-[88px] 
-                lg:top-[100px] xl:top-[100px]
+                lg:top-[100px] xl:top-[80px]
                 right-[-100px]
-                text-[10px]
-                xl:right-[-120px] lg:right-[-120px]  absolute flex flex-col"
+                text-[12px]
+                xl:right-[-35px]
+                lg:right-[-120px]  absolute flex flex-col"
               >
                 <Type />
               </div>
@@ -48,7 +54,7 @@ const About = () => {
             {/* ------------------------------------ */}
             <div
               className=" flex flex-col 
-            xl:ml-[130px]
+            xl:ml-[30px]
             md:ml-[60px] 
             md:mt-[90px]
             lg:ml-[130px]
@@ -57,7 +63,7 @@ const About = () => {
             >
               <TitleAbout title="  The best Lorem Ipsum Generator in all the sea!" />
               {/* ------------------------------------ */}
-              <div className="text-[10px] xl:text-lg lg:text-lg">
+              <div className="text-[10px] xl:text-lg mt-2 lg:text-lg">
                 <Text
                   p1="Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!"
                   p2="Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!"
@@ -65,7 +71,7 @@ const About = () => {
                 />
               </div>
               {/* ------------------------------------ */}
-              <div className="">
+              <div className="mt-10">
                 <Icons />
               </div>
             </div>
@@ -101,7 +107,7 @@ const About = () => {
                 {/* ------------------------------------ */}
                 <div
                   className="text-[10px] xl:text-lg 
-                lg:text-lg lg:pr-10 "
+                lg:text-lg lg:pr-10 mt-2 "
                 >
                   <Text
                     p1="Lemon drops ice cream bear claw sweet roll candy. Chupa chups marzipan jujubes halvah halvah jujubes tiramisu chupa chups chocolate cake. Donut toffee candy sweet cheesecake."
@@ -118,7 +124,7 @@ const About = () => {
                 className="xl:w-[100%]  relative right-0 xl:left-0 
               lg:left-0 lg:w-[100%] mt-[-100px] xl:mt-0 lg:mt-0 z-10 "
               >
-                <div className="absolute right-0">
+                <div className="absolute right-0 xl:w-[410px]">
                   <Carousels />
                 </div>
                 <div
@@ -128,7 +134,7 @@ const About = () => {
                 md:top-[100px]
                 md:left-[320px]
                 xl:left-[-40px]
-                -left-13 absolute text-[10px] flex flex-col"
+                -left-13 absolute text-[12px] flex flex-col"
                 >
                   <Type />
                 </div>
