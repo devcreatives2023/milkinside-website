@@ -4,7 +4,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      fontFamily: { main: "'Barlow', sans-serif"},
+      fontFamily: { main: "'Barlow', sans-serif" },
       backgroundColor: {
         main: "black",
         primary: "white",
@@ -18,6 +18,9 @@ module.exports = {
         main: "0rem 12rem",
         lg: "0rem 9rem",
         sm: "0 2rem",
+      },
+      fontSize: {
+        title: "3rem",
       },
       screens: {
         xsm: "445px",
