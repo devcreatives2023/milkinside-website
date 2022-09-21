@@ -1,9 +1,10 @@
 import React from "react";
-import { Navbar } from "../../components";
+import { Footer, Navbar } from "../../components";
 
 const Contact = () => {
   return (
-    <div className="bg-[#eee] h-screen pt-10 text-primary ">
+    <>
+    <div className="bg-[#eee] h-[100vh] xl:h-[100vh] pt-2 xl:pt-10 text-primary ">
       <Navbar
         logobg="black"
         textl="white"
@@ -12,14 +13,14 @@ const Contact = () => {
         text="black"
         links="white"
       />
-      <div className="flex justify-between mt-[140px] p-main">
+      <div className="flex xl:flex-row lg:flex-row justify-between mt-[140px] p-main flex-col">
         <div className="  mt-10 border-l-2">
           <h1 className=" text-title capitalize font-main">
             the future awaits
           </h1>
 
           <div className=" w-[30px] bg-main h-[3px] ml-1" />
-          <div className="w-[50%] tracking-wider mt-[50px] text-[16px] text-[grey]">
+          <div className="xl:w-[50%] tracking-wider mt-[50px] text-[16px] text-[grey]">
             <p>
               Aliqua molestiae and accusantium quasi culpa. Reprehenderit do and
               quisquam but commodo, aut for cillum eaque.
@@ -39,7 +40,6 @@ const Contact = () => {
             <div>
               <span className="ml-[-31px] font-bold"> E:</span>{" "}
               <span className="ml-2 text-blue-700 cursor-pointer">
-                {" "}
                 abrar@gmail.com
               </span>
             </div>
@@ -52,7 +52,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="mr-auto">
+        <div className="mr-auto border">
           <form className="bg-transparent mt-10 h-[300px] flex flex-col justify-around p-4">
             <div className="flex ">
               <input type="text" placeholder="First Name" className="border-b-2 border-gray-500  bg-transparent placeholder:text-lg p-2 outline-none" />
@@ -69,6 +69,9 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    <div className="mt-[20px]"></div>
+      <Footer />
+    </>
   );
 };
 

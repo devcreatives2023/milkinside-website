@@ -11,7 +11,7 @@ const Footer = () => {
        xl:justify-between
        md:justify-between
        lg:justify-between justify-center
-        gap-9"
+      gap-9"
       >
         <motion.div className="flex flex-col">
           <motion.p
