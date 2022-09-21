@@ -16,6 +16,7 @@ module.exports = {
       },
       padding: {
         main: "0rem 12rem",
+        lg: "0rem 9rem",
         sm: "0 2rem",
       },
       screens: {

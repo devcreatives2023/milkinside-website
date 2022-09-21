@@ -27,7 +27,7 @@ const Slider = () => {
             <motion.div key={items.id}>
               {index === currentSlide && (
                 <div key={items.id}>
-                  <div className="relative" >
+                  <div className="relative">
                     <video
                       autoPlay
                       controls
@@ -41,6 +41,7 @@ const Slider = () => {
                     className="absolute p-4 h-[230px] 
                   left-[12%] xl:left-[20%]
                   top-[8%]  xl:top-[25%] w-[70%] 
+                lg:top-[23%]
                   lg:w-[50%]
                   xl:w-[40%]  bg-slidertext py-6"
                   >
@@ -48,15 +49,20 @@ const Slider = () => {
                       {items.title}
                     </h1>
                     <p
-                      className="text-[12px] xl:text-[16px] lgxl:text-[16px]
+                      className="text-[12px] xl:text-[16px] lg:text-[16px]
                      mt-5 "
                     >
                       {items.text}
                     </p>
                   </div>
                   <div
-                    className="absolute top-[34%] xl:top-[67%] md:top-[60%]
-                   left-[10%] text-[19px] xl:text-[52px] lg:text-[40px]"
+                    className="absolute top-[34%]
+                  xl:top-[67%] md:top-[60%]
+                   lg:top-[65%]
+                   left-[10%]
+                   lg:left-[11%]
+                    text-[19px] xl:text-[52px] 
+                   lg:text-[40px]"
                   >
                     <button onClick={nextSlide}>
                       <icons.RiArrowRightSLine />

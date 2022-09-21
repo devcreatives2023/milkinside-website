@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const Footer = () => {
   return (
-    <div className=" xl:p-main">
+    <div className=" xl:p-main lg:p-lg">
       <div
         className="flex xl:flex-row 
       md:flex-row
@@ -11,7 +11,8 @@ const Footer = () => {
        xl:justify-between
        md:justify-between
        lg:justify-between justify-center
-        gap-9"      >
+        gap-9"
+      >
         <motion.div className="flex flex-col">
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -89,10 +90,12 @@ const Footer = () => {
           </p>
         </motion.div>
       </div>
-      <p className="xl:text-center lg:text-center
-      md:text-center pb-7 p-5
-   text-center text-gray-500 xl:mt-16 lg:mt-16px
-       md:mt-10 text-sm">
+      <p
+        className="xl:text-center lg:text-center
+      md:text-center pb-7 p-5 mt-0
+   text-center text-gray-500 xl:mt-16 
+       md:mt-10 text-sm"
+      >
         copyright reserved@Abrar muthana
       </p>
     </div>

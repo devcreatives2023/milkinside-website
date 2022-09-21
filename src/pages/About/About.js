@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="xl:p-main  md:p-[2rem] ">
+      <div className="xl:p-main  md:p-[2rem]  lg:p-main lg:mt-[100px] ">
         <motion.div
           className="xl:h-[80vh] 
           xl:mt-0
@@ -25,8 +25,10 @@ const About = () => {
           mt-[70px]"
         >
           <div
-            className="flex flex-col xl:flex-row lg:flex-row md:flex-row
-            xl:justify-between lg:justify-between justify-around  xl:mt-[110px]"
+            className="flex flex-col xl:flex-row 
+            lg:flex-row md:flex-row
+            xl:justify-between lg:justify-between 
+            justify-around  xl:mt-[110px]"
           >
             <div
               className="xl:w-[100%]
@@ -36,7 +38,7 @@ const About = () => {
                 right-0 z-10 "
             >
               <div className="relative right-0 w-[410px]">
-                <Carousels />
+                <Carousel />
               </div>
 
               {/* ------------------------------------ */}
@@ -46,7 +48,8 @@ const About = () => {
                 right-[-100px]
                 text-[12px]
                 xl:right-[-35px]
-                lg:right-[-120px]  absolute flex flex-col"
+                lg:right-[-120px] 
+                 absolute flex flex-col"
               >
                 <Type />
               </div>
@@ -134,7 +137,7 @@ const About = () => {
                 md:top-[100px]
                 md:left-[320px]
                 xl:left-[-40px]
-                -left-13 absolute text-[12px] flex flex-col"
+                left-[43px] absolute text-[12px] flex flex-col"
                 >
                   <Type />
                 </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div
       className="fixed left-0 xl:w-[100%] xl:p-main
-    lg:w-[100%] lg:px-[2rem]
+    lg:w-[100%] lg:p-main
       top-0 flex xl:justify-between lg:justify-between  z-40 ">
 
       <div

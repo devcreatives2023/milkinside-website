@@ -30,7 +30,6 @@ const Carousel = () => {
               }}
               key={index}
             >
-            
               {index === currentSlide && (
                 <div>
                   <motion.img
@@ -54,19 +53,20 @@ const Carousel = () => {
       <div>
         <button
           onClick={backwardSlide}
-          className="absolute xl:left-[-40px] xl:bottom-[25px] lg:left-[-60px] 
-          lg:bottom-[65px] bg-primary xl:bg-transparent lg:bg-transparent  p-5 xl:p-0
-          lg:text-main text-primary xl:text-main  text-xl -right-[75px] bottom-[00px]
+          className="absolute xl:left-[-33px] xl:bottom-[25px] lg:left-[-60px] 
+          lg:bottom-[65px]  xl:bg-transparent lg:bg-transparent  p-5 xl:p-0
+          lg:text-main text-main xl:text-main  text-xl 
+          right-[120px] bottom-[00px]
           "
         >
           <icons.BsArrowLeftCircle />
         </button>
         <button
-          className=" uppercase  absolute xl:right-[-40px] xl:bottom-[25px] 
+          className=" uppercase  absolute xl:right-[-30px] xl:bottom-[25px] 
           lg:right-[-60px] lg:bottom-[65px] 
           xl:bg-transparent lg:bg-transparent lg:text-main xl:text-main p-5 xl:p-0
           text-xl
-          -right-[75px]
+          right-[120px]
           bottom-[50px]
           "
           onClick={forWardSlide}
