@@ -28,7 +28,7 @@ const Navbar = ({bg,logobg,textl,text,links}) => {
       </div>
       <div className="py-3 hidden xl:inline-block lg:inline-block md:hidden mr-4" style={{background:links}}>
         <ul className="flex justify-start items-start mr-10 text-xl text-[gray] gap-[210px]">
-          <li className="my-0 lg:my-2 xl:my-6 pl-3">
+          <li className="my-0 lg:my-2 xl:my-6 pl-7">
             <Link to="/work">Work</Link>
           </li>
           <li className=" my-0 lg:my-2 xl:my-6">
