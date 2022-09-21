@@ -14,7 +14,7 @@ import {
 const About = () => {
   return (
     <div className="">
-      <Navbar />
+      <Navbar  logobg="white" textl="black"   bg="black" text="white"/>
       <div className="xl:p-main  md:p-[2rem]  lg:p-main lg:mt-[100px] ">
         <motion.div
           className="xl:h-[80vh] 
@@ -31,13 +31,12 @@ const About = () => {
             justify-around  xl:mt-[110px]"
           >
             <div
-              className="xl:w-[100%]
-                
+              className="xl:w-[100%]   
                 md:w-[90%] w-[60%] relative left-0 xl:left-0 
                 lg:left-0
-                right-0 z-10 "
+                right-0 z-10"
             >
-              <div className="relative right-0 w-[410px]">
+              <div className="relative left-0 w-[410px]">
                 <Carousel />
               </div>
 

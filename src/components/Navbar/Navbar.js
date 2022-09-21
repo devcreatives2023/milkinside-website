@@ -2,28 +2,33 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { icons } from "../../constants";
 
-const Navbar = () => {
+const Navbar = ({bg,logobg,textl,text,links}) => {
   const [toggleNav, setToggleNav] = React.useState(false);
   return (
     <div
       className="fixed left-0 xl:w-[100%] xl:p-main
     lg:w-[100%] lg:p-main
-      top-0 flex xl:justify-between lg:justify-between  z-40 ">
+      top-0 flex xl:justify-between lg:justify-between  z-40 "
+      style={{background:bg,color:text}}
+      >
 
       <div
-        className="w-[220px] xl:w-[450px]  lg:w-[240px] md:w-[300px] ">
+        className="w-[220px] xl:w-[450px]  lg:w-[240px] md:w-[300px] "
+        >
         <p
-        className="bg-primary xl:w-[50%] text-primary text-center
+        className="xl:w-[50%]  text-center
         text-sm  p-[35px]
         xl:py-10 uppercase font-bold font-sans flex justify-center 
         items-center"
+        style={{background:logobg ,color:textl}}
+
         >
           Lorem.
         </p>
       </div>
-      <div className="py-3 hidden xl:inline-block lg:inline-block md:hidden mr-4">
+      <div className="py-3 hidden xl:inline-block lg:inline-block md:hidden mr-4" style={{background:links}}>
         <ul className="flex justify-start items-start mr-10 text-xl text-[gray] gap-[210px]">
-          <li className="my-0 lg:my-2 xl:my-6 ">
+          <li className="my-0 lg:my-2 xl:my-6 pl-3">
             <Link to="/work">Work</Link>
           </li>
           <li className=" my-0 lg:my-2 xl:my-6">
