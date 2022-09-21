@@ -38,12 +38,13 @@ const Slider = () => {
                     </video>
                   </div>
                   <div
-                    className="absolute p-4 h-[230px] 
+                    className="absolute p-4 h-[500px] lg:h-[230px] xl:h-[230px] 
                   left-[12%] xl:left-[20%]
                   top-[8%]  xl:top-[25%] w-[70%] 
                 lg:top-[23%]
                   lg:w-[50%]
-                  xl:w-[40%]  bg-slidertext py-6"
+                  xl:w-[40%]
+                    bg-slidertext py-6"
                   >
                     <h1 className=" xl:text-[36px] lg:text-[36px] capitalize font-serif ">
                       {items.title}

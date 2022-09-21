@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../../components";
 const Contact = () => {
   return (
     <>
-    <div className="bg-[#eee] h-[100vh] xl:h-[100vh] pt-2 xl:pt-10 text-primary ">
+    <div className="bg-[#eee] h-[140vh] xl:h-[100vh] lg:h-[100vh]  md:h-[150vh] pt-2 xl:pt-10 text-primary ">
       <Navbar
         logobg="black"
         textl="white"
@@ -13,7 +13,9 @@ const Contact = () => {
         text="black"
         links="white"
       />
-      <div className="flex xl:flex-row lg:flex-row justify-between mt-[140px] p-main flex-col">
+      <div className="flex xl:flex-row lg:flex-row justify-between mt-[140px] xl:p-main lg:p-main 
+      p-[2rem]
+      flex-col">
         <div className="  mt-10 border-l-2">
           <h1 className=" text-title capitalize font-main">
             the future awaits
@@ -63,7 +65,7 @@ const Contact = () => {
               <input type="text" placeholder="Lase Company"  className="border-b-2 ml-2 bg-transparent placeholder:text-lg p-2 outline-none border-gray-500"/>
             </div>
             <div className="w-[100%]">
-              <input type="text" placeholder="Message"  className="border-b-2 bg-transparent placeholder:text-lg p-2 outline-none border-gray-500"/>
+              <input type="text" placeholder="Message"  className="border-b-2 bg-transparent placeholder:text-lg p-2 outline-none border-gray-500 w-[100%]"/>
             </div>
           </form>
         </div>

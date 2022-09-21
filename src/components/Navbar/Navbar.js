@@ -74,7 +74,7 @@ const Navbar = ({bg,logobg,textl,text,links}) => {
               <Link to="/">About</Link>
             </li>
             <li>
-              <Link to="/">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         ) : (
