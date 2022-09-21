@@ -2,7 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 const Footer = () => {
   return (
-    <div className=" xl:p-main lg:p-lg">
+    <div className=" xl:p-main lg:p-lg
+    ">
       <div
         className="flex xl:flex-row 
       md:flex-row
