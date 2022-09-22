@@ -76,9 +76,9 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
         />
         {toggleNav ? (
           <motion.ul
-            inital={{ height: 0 }}
+            inital={{ height: 100 }}
             whileInView={{
-              height: 100,
+              height: 0,
               transition: {
                 duration: 1,
               },
