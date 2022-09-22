@@ -7,7 +7,7 @@ import {
 import { IoLogoSlack, IoLogoVk } from "react-icons/io5";
 import { IoLogoXing } from "react-icons/io";
 import { SiAirbus, SiRoku } from "react-icons/si";
-import { GiEchoRipples } from "react-icons/gi";
+import { GiEchoRipples, GiCrossMark} from "react-icons/gi";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 
@@ -25,4 +25,5 @@ export default {
   HiOutlineMenuAlt4,
   RiArrowLeftSLine,
   RiArrowRightSLine,
+  GiCrossMark
 };

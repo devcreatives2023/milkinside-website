@@ -1,8 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* font family */
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Barlow:wght@300;400&family=Nunito+Sans:wght@200;300&family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Raleway:ital,wght@0,200;0,400;1,600&family=Roboto+Slab:wght@300;400&family=Sriracha&family=Titillium+Web:ital,wght@0,200;1,300&display=swap");
+/* ---------- */
+
 body {
   background-color: black;
 }
@@ -11,18 +13,24 @@ button {
   border: none;
 }
 
-@media screen and (min-width:1100px) {
-  body {
-    cursor: none;
-  }
-  
+/* scroll */
+::-webkit-scrollbar {
+  background-color: rgb(206, 177, 13);
+  border-radius: 50px;
+  width: 4px;
 }
+
+::-webkit-scrollbar-button {
+  border-radius: 50px;
+  background-color: #eee;
+}
+/* scroll about page */
+
+/*remove video control   */
 video::-webkit-media-controls {
   display: none;
 }
-
-
-
+/* cursor */
 .cursor-dot,
 .cursor-dot-outline {
   pointer-events: none;
@@ -39,7 +47,7 @@ video::-webkit-media-controls {
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color:rgba(0, 0, 0, 0.159);
+  background-color: rgba(0, 0, 0, 0.159);
 }
 
 .cursor-dot-outline {
@@ -55,4 +63,8 @@ video::-webkit-media-controls {
   row-gap: 40px;
 }
 
-
+@media screen and (min-width: 1100px) {
+  body {
+    cursor: none;
+  }
+}
