@@ -69,14 +69,14 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
       >
         <icons.HiOutlineMenuAlt4
           onClick={() => setToggleNav(!toggleNav)}
-          className="absolute right-[40px] text-main 
-           text-[3rem] flex mt-5 mr-10"
+          className="absolute right-[20px] text-main 
+           text-[3rem] flex mt-5"
         />
         {toggleNav ? (
           <ul
             className={
               toggleNav
-                ? " bg-black w-[99%] h-[100%] flex text-[32px] leading-[40px]    justify-center items-center  flex-col  fixed left-0 top-0 transition-[350ms] z-50 "
+                ? " bg-black  w-[99%] h-[100%] flex text-[32px]  justify-center items-center  flex-col  fixed left-0 top-0 transition-[350ms] z-50 "
                 : " bg-black w-0 h-0 flex justify-center fixed flex-col top-0 transition-[350ms] z-50 "
             }
           >
