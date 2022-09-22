@@ -13,9 +13,8 @@ const menuVariants = {
   },
 };
 
-const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
+const Navbar = ({ bg, logobg, textl, text, links, navbarsmall, icon }) => {
   const [show, setshow] = React.useState(false);
-  const [active, setActive] = React.useState("home");
 
   return (
     <div
@@ -24,7 +23,7 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
       top-0 flex xl:justify-between lg:justify-between  z-40 "
       style={{ background: bg, color: text }}
     >
-      <div className="w-[220px] xl:w-[450px]  lg:w-[240px] md:w-[300px] ">
+      <div className="w-[220px] xl:w-[450px]  lg:w-[210px] md:w-[300px] ">
         <p
           className="xl:w-[50%]  text-center
         text-sm  p-[35px]
@@ -39,35 +38,14 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
         className="py-3 hidden xl:inline-block lg:inline-block md:hidden mr-4"
         style={{ background: links }}
       >
-        <ul className="flex justify-start items-start mr-10 text-xl text-[gray] gap-[210px]">
-          <li
-            onClick={() => setActive("work")}
-            className={
-              active === "work"
-                ? "text-[gold] my-0 lg:my-2 xl:my-6 pl-7"
-                : "text-gray-400 my-0 lg:my-2 xl:my-6 pl-7"
-            }
-          >
+        <ul className="flex justify-start items-start mr-10 text-xl text-[gray] lg:gap-[150px] xl:gap-[210px]">
+          <li className="text-gray-400  hover:text-[gold] my-0 lg:my-2 xl:my-6 pl-7">
             <Link to="/work">Work</Link>
           </li>
-          <li
-            onClick={() => setActive("about")}
-            className={
-              active === "about"
-                ? "text-[gold] my-0 lg:my-2 xl:my-6"
-                : "my-0 lg:my-2 xl:my-6 text-gray-400"
-            }
-          >
+          <li className="text-gray-400  hover:text-[gold] my-0 lg:my-2 xl:my-6 pl-7">
             <Link to="/">About</Link>
           </li>
-          <li
-            onClick={() => setActive("contact")}
-            className={
-              active === "contact"
-                ? "text-[gold] my-0 lg:my-2 xl:my-6"
-                : " my-0 lg:my-2 xl:my-6 text-gray-400"
-            }
-          >
+          <li className="text-gray-400  hover:text-[gold] my-0 lg:my-2 xl:my-6 pl-7">
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
@@ -81,14 +59,14 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
           onClick={() => setshow(!show)}
           className="absolute right-0 
            text-[3rem] mt-5"
-           style={{color:icon}}
+          style={{ color: icon }}
         />
         <motion.nav
           initial={false}
           variants={menuVariants}
           animate={show ? "opened" : "closed"}
           className=" bg-main h-screen w-[400px] fixed top-0 p-10 flex flex-col   "
-          style={{color:navbarsmall}}
+          style={{ color: navbarsmall }}
         >
           <motion.button
             className="reltive left-0 top-0 text-[gold]"
@@ -96,7 +74,7 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
           >
             <icons.GiCrossMark />
           </motion.button>
-          <ul className="flex flex-col items-start  leading-[70px]  text-2xl" >
+          <ul className="flex flex-col items-start  leading-[70px]  text-2xl">
             <li className=" hover:text-[gold] hover:opacity-[0.8]">
               <Link to="/work">work</Link>
             </li>

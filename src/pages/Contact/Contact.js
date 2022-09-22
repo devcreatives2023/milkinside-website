@@ -1,13 +1,13 @@
 import React from "react";
 import { Footer, Navbar } from "../../components";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <>
       <div
         className="bg-[#eee] h-[160vh] xl:h-[100vh] lg:h-[120vh]
-    w-[100%]
-    md:h-[150vh] pt-2 xl:pt-10 text-primary "
+        w-[100%]
+        md:h-[150vh] pt-2 xl:pt-10 text-primary "
       >
         <Navbar
           logobg="black"
@@ -19,14 +19,24 @@ const Contact = () => {
           navbarsmall="white"
           icon="black"
         />
-        <div
+        <motion.div
+          initial={{ opacity: 0,x:40 }}
+          animate={{
+            opacity: 1,
+            x:0,
+            transition: {
+              duration: 1,
+            },
+          }}
           className="flex xl:flex-row lg:flex-row justify-between mt-[140px] xl:p-main lg:p-main 
       px-[1rem]
       flex-col"
         >
           <div className="  mt-10 border-l-2">
-            <h1 className=" xl:text-title lg:text-title md:text-[26px] 
-            text-[22px] capitalize font-main">
+            <h1
+              className=" xl:text-title lg:text-title md:text-[26px] 
+            text-[22px] capitalize font-main"
+            >
               the future awaits
             </h1>
 
@@ -104,7 +114,7 @@ const Contact = () => {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="mt-[20px]"></div>
       <Footer />

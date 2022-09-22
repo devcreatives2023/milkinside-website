@@ -14,8 +14,23 @@ import {
 const About = () => {
   return (
     <>
-      <Navbar logobg="white" textl="black" bg="black" text="white" icon="white" />
-      <div className="app__about">
+      <Navbar
+        logobg="white"
+        textl="black"
+        bg="black"
+        text="white"
+        icon="white"
+      />
+      <motion.div
+        initial={{ opacity: 1, x: -30 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: {
+            duration: 1,
+          },
+        }}
+      >
         <div className="app__about-top xl:p-main  md:p-[2rem]  lg:p-main lg:mt-[100px] ">
           <motion.div
             className="xl:h-[80vh] 
@@ -147,7 +162,7 @@ const About = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );
