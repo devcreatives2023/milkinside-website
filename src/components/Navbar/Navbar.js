@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { icons } from "../../constants";
+import { motion } from "framer-motion";
+
 const Navbar = ({ bg, logobg, textl, text, links }) => {
   const [toggleNav, setToggleNav] = React.useState(false);
   const [active, setActive] = React.useState("home");
@@ -62,10 +64,10 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
       </div>
       <div
         className="visible  xl:invisible
-      fixed top-0 left-0  right-0 
+      fixed top-0 left-0  right-10 
       lg:hidden md:inline-block  
-      w-[100%]
 "
+        style={{ transition: "all 0.5s ease-in" }}
       >
         <icons.HiOutlineMenuAlt4
           onClick={() => setToggleNav(!toggleNav)}
@@ -73,14 +75,25 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
            text-[3rem] flex mt-5"
         />
         {toggleNav ? (
-          <ul
+          <motion.ul
+            inital={{ height: 0 }}
+            whileInView={{
+              height: 100,
+              transition: {
+                duration: 1,
+              },
+            }}
             className={
               toggleNav
-                ? " bg-black  w-[99%] h-[100%] flex text-[32px]  justify-center items-center  flex-col  fixed left-0 top-0 transition-[350ms] z-50 "
+                ? " bg-black  w-[99%] h-[100%]  flex text-[32px]  justify-center items-center  flex-col  fixed left-0 top-0 transition-[350ms] z-50 "
                 : " bg-black w-0 h-0 flex justify-center fixed flex-col top-0 transition-[350ms] z-50 "
             }
+            style={{
+              transition: "all 0.5s ease-in-out",
+              transformOrigin: "right top",
+            }}
           >
-            <li className="mt-[-400px]">
+            <li className="mt-[-200px]">
               <button
                 onClick={() => setToggleNav()}
                 className="absolute right-5 top-5 "
@@ -92,8 +105,8 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
               onClick={() => setActive("work")}
               className={
                 active === "work"
-                  ? "border-b-3 pb-2 border-[gold] hover:text-[#5f551c]  transition-[0.6s] text-[silver]"
-                  : "text-gray-400"
+                  ? "border-b-2 pb-2 border-[gold] hover:text-[#5f551c]  transition-[0.6s] text-[silver]"
+                  : "text-[silver]"
               }
             >
               <Link to="/work">Work</Link>
@@ -102,8 +115,8 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
               onClick={() => setActive("about")}
               className={
                 active === "about"
-                  ? "border-b-3 border-[gold] hover:text-[#5f551c]  transition-[0.6s]  pb-2 text-[silver]"
-                  : "text-gray-400"
+                  ? "border-b-2 border-[gold] hover:text-[#5f551c]  transition-[0.6s]  pb-2 text-[silver]"
+                  : "text-[silver]"
               }
             >
               <Link to="/">About</Link>
@@ -112,13 +125,13 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
               onClick={() => setActive("contact")}
               className={
                 active === "contact"
-                  ? "border-b-3 border-[gold]  transition-[0.6s] hover:text-[#5f551c]  pb-2 text-[silver]"
-                  : "text-gray-400"
+                  ? "border-b-2 border-[gold]  transition-[0.6s] hover:text-[#5f551c]  pb-2 text-[silver]"
+                  : "text-[silver]"
               }
             >
               <Link to="/contact">Contact</Link>
             </li>
-          </ul>
+          </motion.ul>
         ) : (
           ""
         )}
