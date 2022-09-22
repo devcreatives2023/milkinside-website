@@ -4,22 +4,18 @@ import { icons } from "../../constants";
 import { motion } from "framer-motion";
 const menuVariants = {
   opened: {
-    top: 0,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.5
-    }
+    opacity: 1,
+    x: 0,
   },
   closed: {
-    top: "-80vh"
-  }
+    opacity: 0,
+    x: 100,
+  },
 };
 
 const Navbar = ({ bg, logobg, textl, text, links }) => {
-  const [toggleNav, setToggleNav] = React.useState(false);
+  const [show, setshow] = React.useState(false);
   const [active, setActive] = React.useState("home");
-
-
 
   return (
     <div
@@ -76,74 +72,40 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
           </li>
         </ul>
       </div>
-
-
-      {/* navbar for small screen  */}
       <div
         className="visible  xl:invisible
-      fixed top-0 left-0  right-10 
       lg:hidden md:inline-block"
         style={{ transition: "all 0.5s ease-in" }}
       >
         <icons.HiOutlineMenuAlt4
-          onClick={() => setToggleNav(!toggleNav)}
-          className="absolute right-[20px] md:right-[69px] text-main 
-           text-[3rem] flex mt-5"
+          onClick={() => setshow(!show)}
+          className="  absolute righ md:left-[600px] text-main 
+           text-[3rem]  mt-5"
         />
-        {toggleNav ? (
-          <motion.ul
+        <motion.nav
           initial={false}
           variants={menuVariants}
-          animate={toggleNav ? "opened" : "closed"}
-
-            className="bg-black h-[90vh] w-[100vh] fixed top-0 flex right-[1px]  flex-col justify-center items-center"
-            // style={{
-            //   transition: "all 0.5s ease-in-out",
-            //   transformOrigin: "right top",
-            // }}
+          animate={show ? "opened" : "closed"}
+          className=" bg-main h-[70vh] w-[100%] fixed top-0 p-10 flex flex-col   "
+        >
+          <motion.button
+            className="reltive left-0 top-0 text-[gold]"
+            onClick={() => setshow(!show)}
           >
-            <li className="mt-[-200px]">
-              <button
-                onClick={() => setToggleNav()}
-                className="absolute right-[55px] top-5  text-[gold]"
-              >
-                <icons.GiCrossMark />
-              </button>
+            <icons.GiCrossMark />
+          </motion.button>
+          <ul className="flex flex-col items-start  leading-[70px]  text-2xl">
+            <li className=" hover:text-[gold] hover:opacity-[0.8]">
+              <Link to="/work">work</Link>
             </li>
-            <li
-              onClick={() => setActive("work")}
-              className={
-                active === "work"
-                  ? "border-b-2 pb-2 border-[gold] hover:text-[gold]  transition-[0.6s] text-[silver]"
-                  : "text-[silver]"
-              }
-            >
-              <Link to="/work">Work</Link>
+            <li className=" hover:text-[gold] hover:opacity-[0.8]">
+              <Link to="/about">about</Link>
             </li>
-            <li
-              onClick={() => setActive("about")}
-              className={
-                active === "about"
-                  ? "border-b-2 border-[gold] hover:text-[#5f551c]  transition-[0.6s]  pb-2 text-[silver]"
-                  : "text-[silver]"
-              }
-            >
-              <Link to="/">About</Link>
+            <li className=" hover:text-[gold] hover:opacity-[0.8]">
+              <Link to="/contact">contact</Link>
             </li>
-            <li
-              onClick={() => setActive("contact")}
-              className={
-                active === "contact"
-                  ? "border-b-2 border-[gold]  transition-[0.6s] hover:text-[#5f551c]  pb-2 text-[silver]"
-                  : "text-[silver]"
-              }
-            >
-              <Link to="/contact">Contact</Link>
-            </li>
-          </motion.ul>
-        ) : (
-          ""
-        )}
+          </ul>
+        </motion.nav>
       </div>
     </div>
   );
