@@ -23,7 +23,7 @@ const Navbar = ({ bg, logobg, textl, text, links, navbarsmall, icon }) => {
       top-0 flex xl:justify-between lg:justify-between  z-40 "
       style={{ background: bg, color: text }}
     >
-      <div className="w-[399px] xl:w-[450px]  lg:w-[210px] md:w-screen ">
+      <div className="w-[390px] xl:w-[450px]  lg:w-[210px] md:w-screen ">
         <p
           className="xl:w-[50%]  text-center
         text-sm  p-[35px]
@@ -57,7 +57,7 @@ const Navbar = ({ bg, logobg, textl, text, links, navbarsmall, icon }) => {
       >
         <icons.HiOutlineMenuAlt4
           onClick={() => setshow(!show)}
-          className="absolute right-0 
+          className="absolute -right-[0px] 
            text-[3rem] mt-5"
           style={{ color: icon }}
         />
