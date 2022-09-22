@@ -13,7 +13,7 @@ const menuVariants = {
   },
 };
 
-const Navbar = ({ bg, logobg, textl, text, links }) => {
+const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
   const [show, setshow] = React.useState(false);
   const [active, setActive] = React.useState("home");
 
@@ -79,14 +79,16 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
       >
         <icons.HiOutlineMenuAlt4
           onClick={() => setshow(!show)}
-          className="  absolute righ md:left-[600px] text-main 
+          className="  absolute righ md:left-[600px]
            text-[3rem]  mt-5"
+           style={{color:icon}}
         />
         <motion.nav
           initial={false}
           variants={menuVariants}
           animate={show ? "opened" : "closed"}
           className=" bg-main h-[70vh] w-[100%] fixed top-0 p-10 flex flex-col   "
+          style={{color:navbarsmall}}
         >
           <motion.button
             className="reltive left-0 top-0 text-[gold]"
@@ -94,7 +96,7 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
           >
             <icons.GiCrossMark />
           </motion.button>
-          <ul className="flex flex-col items-start  leading-[70px]  text-2xl">
+          <ul className="flex flex-col items-start  leading-[70px]  text-2xl" >
             <li className=" hover:text-[gold] hover:opacity-[0.8]">
               <Link to="/work">work</Link>
             </li>

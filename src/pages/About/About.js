@@ -14,7 +14,7 @@ import {
 const About = () => {
   return (
     <>
-      <Navbar logobg="white" textl="black" bg="black" text="white" />
+      <Navbar logobg="white" textl="black" bg="black" text="white" icon="white" />
       <div className="app__about">
         <div className="app__about-top xl:p-main  md:p-[2rem]  lg:p-main lg:mt-[100px] ">
           <motion.div
@@ -133,11 +133,11 @@ const About = () => {
                   <div
                     className="uppercase rotate-[90deg] top-10 
                   xl:top-[100px] lg:top-[100px]
-                lg:left-[-50px]
-                md:top-[100px]
-                md:left-[320px]
-                xl:left-[-40px]
-                left-[43px] absolute text-[12px] flex flex-col"
+                  lg:left-[-50px]
+                  md:top-[100px]
+                  md:left-[320px]
+                  xl:left-[-40px]
+                  left-[43px] absolute text-[12px] flex flex-col"
                   >
                     <Type />
                   </div>

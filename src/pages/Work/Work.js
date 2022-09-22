@@ -3,10 +3,19 @@ import { Navbar, Slider } from "../../components";
 import { motion } from "framer-motion";
 const Work = () => {
   return (
-    <motion.div className="bg-main text-main">
-      <Navbar logobg="white" textl="black"   bg="black" text="white" links="black"/>
+    <>
+
+      <Navbar
+        logobg="white"
+        textl="black"
+        bg="black"
+        text="white"
+        links="black"
+      />
+      <motion.div className="bg-main text-main">
         <Slider />
-    </motion.div>
+      </motion.div>
+    </>
   );
 };
 
