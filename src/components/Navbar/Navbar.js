@@ -65,8 +65,7 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
       <div
         className="visible  xl:invisible
       fixed top-0 left-0  right-10 
-      lg:hidden md:inline-block  
-"
+      lg:hidden md:inline-block"
         style={{ transition: "all 0.5s ease-in" }}
       >
         <icons.HiOutlineMenuAlt4
@@ -80,7 +79,7 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
             whileInView={{
               height: 0,
               transition: {
-                duration: 1,
+                duration: 5,
               },
             }}
             className={
