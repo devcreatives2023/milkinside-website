@@ -76,11 +76,11 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
           <ul
             className={
               toggleNav
-                ? " bg-black w-[80%] h-[100%] flex text-[32px] leading-[40px] items-center flex-col justify-center fixed left-0 top-0 transition-[350ms] z-50 "
+                ? " bg-black w-[99%] h-[100%] flex text-[32px] leading-[40px]    justify-center items-center  flex-col  fixed left-0 top-0 transition-[350ms] z-50 "
                 : " bg-black w-0 h-0 flex justify-center fixed flex-col top-0 transition-[350ms] z-50 "
             }
           >
-            <li>
+            <li className="mt-[-400px]">
               <button
                 onClick={() => setToggleNav()}
                 className="absolute right-5 top-5 "
@@ -88,13 +88,34 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
                 <icons.GiCrossMark />
               </button>
             </li>
-            <li>
+            <li
+              onClick={() => setActive("work")}
+              className={
+                active === "work"
+                  ? "border-b-3 pb-2 border-[gold] hover:text-[#5f551c]  transition-[0.6s] text-[silver]"
+                  : "text-gray-400"
+              }
+            >
               <Link to="/work">Work</Link>
             </li>
-            <li>
+            <li
+              onClick={() => setActive("about")}
+              className={
+                active === "about"
+                  ? "border-b-3 border-[gold] hover:text-[#5f551c]  transition-[0.6s]  pb-2 text-[silver]"
+                  : "text-gray-400"
+              }
+            >
               <Link to="/">About</Link>
             </li>
-            <li>
+            <li
+              onClick={() => setActive("contact")}
+              className={
+                active === "contact"
+                  ? "border-b-3 border-[gold]  transition-[0.6s] hover:text-[#5f551c]  pb-2 text-[silver]"
+                  : "text-gray-400"
+              }
+            >
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
