@@ -87,7 +87,7 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
           initial={false}
           variants={menuVariants}
           animate={show ? "opened" : "closed"}
-          className=" bg-main h-[70vh] w-[100%] fixed top-0 p-10 flex flex-col   "
+          className=" bg-main h-[100%] w-[100%] fixed top-0 p-10 flex flex-col   "
           style={{color:navbarsmall}}
         >
           <motion.button
