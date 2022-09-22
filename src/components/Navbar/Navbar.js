@@ -2,10 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { icons } from "../../constants";
 import { motion } from "framer-motion";
+const menuVariants = {
+  opened: {
+    top: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.5
+    }
+  },
+  closed: {
+    top: "-80vh"
+  }
+};
 
 const Navbar = ({ bg, logobg, textl, text, links }) => {
   const [toggleNav, setToggleNav] = React.useState(false);
   const [active, setActive] = React.useState("home");
+
+
 
   return (
     <div
@@ -62,6 +76,9 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
           </li>
         </ul>
       </div>
+
+
+      {/* navbar for small screen  */}
       <div
         className="visible  xl:invisible
       fixed top-0 left-0  right-10 
@@ -70,32 +87,25 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
       >
         <icons.HiOutlineMenuAlt4
           onClick={() => setToggleNav(!toggleNav)}
-          className="absolute right-[20px] text-main 
+          className="absolute right-[20px] md:right-[69px] text-main 
            text-[3rem] flex mt-5"
         />
         {toggleNav ? (
           <motion.ul
-            inital={{ height: 100 }}
-            whileInView={{
-              height: 0,
-              transition: {
-                duration: 5,
-              },
-            }}
-            className={
-              toggleNav
-                ? " bg-black  w-[99%] h-[100%]  flex text-[32px]  justify-center items-center  flex-col  fixed left-0 top-0 transition-[350ms] z-50 "
-                : " bg-black w-0 h-0 flex justify-center fixed flex-col top-0 transition-[350ms] z-50 "
-            }
-            style={{
-              transition: "all 0.5s ease-in-out",
-              transformOrigin: "right top",
-            }}
+          initial={false}
+          variants={menuVariants}
+          animate={toggleNav ? "opened" : "closed"}
+
+            className="bg-black h-[90vh] w-[100vh] fixed top-0 flex right-[1px]  flex-col justify-center items-center"
+            // style={{
+            //   transition: "all 0.5s ease-in-out",
+            //   transformOrigin: "right top",
+            // }}
           >
             <li className="mt-[-200px]">
               <button
                 onClick={() => setToggleNav()}
-                className="absolute right-5 top-5 "
+                className="absolute right-[55px] top-5  text-[gold]"
               >
                 <icons.GiCrossMark />
               </button>
@@ -104,7 +114,7 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
               onClick={() => setActive("work")}
               className={
                 active === "work"
-                  ? "border-b-2 pb-2 border-[gold] hover:text-[#5f551c]  transition-[0.6s] text-[silver]"
+                  ? "border-b-2 pb-2 border-[gold] hover:text-[gold]  transition-[0.6s] text-[silver]"
                   : "text-[silver]"
               }
             >
