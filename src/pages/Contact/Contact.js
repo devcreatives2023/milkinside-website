@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <>
       <div
-        className="bg-[#eee] h-[160vh] xl:h-[100vh] lg:h-[100vh]
+        className="bg-[#eee] h-[160vh] xl:h-[100vh] lg:h-[120vh]
     w-[100%]
     md:h-[150vh] pt-2 xl:pt-10 text-primary "
       >
@@ -25,7 +25,8 @@ const Contact = () => {
       flex-col"
         >
           <div className="  mt-10 border-l-2">
-            <h1 className=" xl:text-title lg:text-title text-[16px] capitalize font-main">
+            <h1 className=" xl:text-title lg:text-title md:text-[26px] 
+            text-[22px] capitalize font-main">
               the future awaits
             </h1>
 
@@ -74,24 +75,24 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="First Name"
-                  className="border-b-2 border-gray-500  bg-transparent placeholder:text-lg p-2 outline-none"
+                  className="border-b-2 border-gray-500  bg-transparent  lg:placeholder:text-lg xl:placeholder:text-lg p-2 outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Lase Name"
-                  className="border-b-2 ml-2 border-gray-500 bg-transparent placeholder:text-lg p-2 outline-none"
+                  className="border-b-2 xl:ml-2 lg:ml-2 border-gray-500 bg-transparent  lg:placeholder:text-lg xl:placeholder:text-lg p-2 outline-none"
                 />
               </div>
               <div className="flex xl:flex-row lg:flex-row flex-col">
                 <input
                   type="email"
                   placeholder="Email"
-                  className="border-b-2 border-gray-500 bg-transparent placeholder:text-lg p-2 outline-none"
+                  className="border-b-2 border-gray-500 bg-transparent  lg:placeholder:text-lg xl:placeholder:text-lg p-2 outline-none"
                 />
                 <input
                   type="text"
-                  placeholder="Lase Company"
-                  className="border-b-2 ml-2 bg-transparent placeholder:text-lg p-2 outline-none border-gray-500"
+                  placeholder="Company"
+                  className="border-b-2 xl:ml-2 lg:ml-2 bg-transparent  lg:placeholder:text-lg xl:placeholder:text-lg p-2 outline-none border-gray-500"
                 />
               </div>
               <div className="w-[100%]">

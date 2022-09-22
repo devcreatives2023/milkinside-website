@@ -20,7 +20,7 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
   return (
     <div
       className="fixed left-0 xl:w-[100%] xl:p-main
-    lg:w-[100%] lg:p-main
+    lg:w-[100%] lg:p-main 
       top-0 flex xl:justify-between lg:justify-between  z-40 "
       style={{ background: bg, color: text }}
     >
@@ -74,20 +74,20 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
       </div>
       <div
         className="visible  xl:invisible
-      lg:hidden md:inline-block"
+      lg:hidden md:inline-block w-[100%] h-[100%]"
         style={{ transition: "all 0.5s ease-in" }}
       >
         <icons.HiOutlineMenuAlt4
           onClick={() => setshow(!show)}
-          className="  absolute left-[290px] md:left-[600px]
-           text-[3rem]  mt-5"
+          className="absolute right-0 
+           text-[3rem] mt-5"
            style={{color:icon}}
         />
         <motion.nav
           initial={false}
           variants={menuVariants}
           animate={show ? "opened" : "closed"}
-          className=" bg-main h-[100%] w-[100%] fixed top-0 p-10 flex flex-col   "
+          className=" bg-main h-screen w-[400px] fixed top-0 p-10 flex flex-col   "
           style={{color:navbarsmall}}
         >
           <motion.button
