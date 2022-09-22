@@ -27,6 +27,7 @@ const Carousel = () => {
                 type: "spring",
                 ease: "linear",
                 delay: 1,
+                duration:1
               }}
               key={index}
             >
@@ -38,7 +39,6 @@ const Carousel = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 1 }}
                     transition={{
-                      ease: [0, 0.71, 0.2, 1.01],
                       duration: 1,
                     }}
                     style={{ transformOrigin: "top left" }}
