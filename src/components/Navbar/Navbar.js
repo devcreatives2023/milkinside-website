@@ -99,7 +99,7 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
               <Link to="/work">work</Link>
             </li>
             <li className=" hover:text-[gold] hover:opacity-[0.8]">
-              <Link to="/about">about</Link>
+              <Link to="/">about</Link>
             </li>
             <li className=" hover:text-[gold] hover:opacity-[0.8]">
               <Link to="/contact">contact</Link>
