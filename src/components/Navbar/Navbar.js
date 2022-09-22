@@ -19,11 +19,11 @@ const Navbar = ({ bg, logobg, textl, text, links, navbarsmall, icon }) => {
   return (
     <div
       className="fixed left-0 xl:w-[100%] xl:p-main
-    lg:w-[100%] lg:p-main 
+    lg:w-[100%] lg:p-main md:px-[2rem]
       top-0 flex xl:justify-between lg:justify-between  z-40 "
       style={{ background: bg, color: text }}
     >
-      <div className="w-[390px] xl:w-[450px]  lg:w-[210px] md:w-screen ">
+      <div className="w-[390px] xl:w-[450px]  lg:w-[210px] md:w-[440px] ">
         <p
           className="xl:w-[50%]  text-center
         text-sm  p-[35px]
