@@ -19,7 +19,7 @@ const Slider = () => {
   return (
     <>
       <motion.div
-        className=" h-[140vh] xl:h-[80vh] lg:h-[80vh] 
+        className=" h-[120vh] xl:h-[80vh] lg:h-[80vh] 
        relative top-[100px]  w-[100%] overflow-hidden "
       >
         {data.sliderWork.map((items, index) => {

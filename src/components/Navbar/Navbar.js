@@ -79,7 +79,7 @@ const Navbar = ({ bg, logobg, textl, text, links ,navbarsmall,icon}) => {
       >
         <icons.HiOutlineMenuAlt4
           onClick={() => setshow(!show)}
-          className="  absolute righ md:left-[600px]
+          className="  absolute left-[290px] md:left-[600px]
            text-[3rem]  mt-5"
            style={{color:icon}}
         />
