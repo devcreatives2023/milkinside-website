@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { icons } from "../../constants";
 const Navbar = ({ bg, logobg, textl, text, links }) => {
   const [toggleNav, setToggleNav] = React.useState(false);
-  const [active,setActive] = React.useState("home");
+  const [active, setActive] = React.useState("home");
 
   return (
     <div
@@ -28,13 +28,34 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
         style={{ background: links }}
       >
         <ul className="flex justify-start items-start mr-10 text-xl text-[gray] gap-[210px]">
-          <li onClick={()=>setActive("work")} className={active ==="work"?"text-[gold] my-0 lg:my-2 xl:my-6 pl-7":"text-gray-400 my-0 lg:my-2 xl:my-6 pl-7" } >
-            <Link to="/work"  >Work</Link>
+          <li
+            onClick={() => setActive("work")}
+            className={
+              active === "work"
+                ? "text-[gold] my-0 lg:my-2 xl:my-6 pl-7"
+                : "text-gray-400 my-0 lg:my-2 xl:my-6 pl-7"
+            }
+          >
+            <Link to="/work">Work</Link>
           </li>
-          <li onClick={()=>setActive("about")} className={active ==="about"?"text-[gold] my-0 lg:my-2 xl:my-6":"my-0 lg:my-2 xl:my-6 text-gray-400" } >
-            <Link to="/" >About</Link>
+          <li
+            onClick={() => setActive("about")}
+            className={
+              active === "about"
+                ? "text-[gold] my-0 lg:my-2 xl:my-6"
+                : "my-0 lg:my-2 xl:my-6 text-gray-400"
+            }
+          >
+            <Link to="/">About</Link>
           </li>
-          <li onClick={()=>setActive("contact")} className={active ==="contact" ? "text-[gold] my-0 lg:my-2 xl:my-6":" my-0 lg:my-2 xl:my-6 text-gray-400" }>
+          <li
+            onClick={() => setActive("contact")}
+            className={
+              active === "contact"
+                ? "text-[gold] my-0 lg:my-2 xl:my-6"
+                : " my-0 lg:my-2 xl:my-6 text-gray-400"
+            }
+          >
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
@@ -53,12 +74,16 @@ const Navbar = ({ bg, logobg, textl, text, links }) => {
         />
         {toggleNav ? (
           <ul
-            className={toggleNav ?" bg-black w-[100%] h-[100%] flex text-[32px] leading-[40px] items-center flex-col justify-center fixed left-0 top-0 transition-[350ms] z-50 ":" bg-black w-0 h-0 flex justify-center fixed flex-col top-0 transition-[350ms] z-50 " }
+            className={
+              toggleNav
+                ? " bg-black w-[80%] h-[100%] flex text-[32px] leading-[40px] items-center flex-col justify-center fixed left-0 top-0 transition-[350ms] z-50 "
+                : " bg-black w-0 h-0 flex justify-center fixed flex-col top-0 transition-[350ms] z-50 "
+            }
           >
             <li>
               <button
                 onClick={() => setToggleNav()}
-                className=" right-5 top-5 "
+                className="absolute right-5 top-5 "
               >
                 <icons.GiCrossMark />
               </button>
